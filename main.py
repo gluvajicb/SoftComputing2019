@@ -35,6 +35,7 @@ def process_video(video_path):
 
         ret, frame = video.read()
 
+
         if frame is False:
             print("Can not load video frame!")
 
