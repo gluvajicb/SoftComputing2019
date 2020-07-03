@@ -60,7 +60,7 @@ def process_video(video_path):
 
         # Calculates Threshold for Difference
         threshold = cv2.threshold(difference, 20, 255, cv2.THRESH_BINARY)[1]
-        threshold = cv2.dilate(threshold, None, iterations=2) # None bi mozda moglo da se obrise
+        threshold = cv2.dilate(threshold, None, iterations=2)
 
         contours = cv2.findContours(threshold, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[0]
 
@@ -89,7 +89,7 @@ def process_video(video_path):
                 Fourth arg> Color of the borders of a rectangle.
                 Fifth arg> Thickness of the border.
             '''
-            cv2.rectangle(frame, bottomLeftPoint, upperRightPoint, (0, 0, 255), 1) # crta pravougaonik [0, 255, 0] moze da se menja, 2 je debljiona
+            cv2.rectangle(frame, bottomLeftPoint, upperRightPoint, (0, 0, 255), 1)
 
             # Calculating Center Point on X scale and Y scale.
             rectangleCenterX = (x + x + width) / 2
